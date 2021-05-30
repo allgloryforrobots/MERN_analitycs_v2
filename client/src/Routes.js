@@ -5,14 +5,21 @@ import { useSelector } from 'react-redux'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
+import OverviewPage from './pages/OverviewPage'
+import RegisterRedirect from './components/RegisterRedirect'
 
 export const Routes = () => {
   const isAuth = useSelector((state) => state.auth.isAuth)  
+  const registerRedirect = useSelector((state) => state.register.registerRedirect)  
+
   if (isAuth) {
     return (
         <Switch>
             <Route path="/" exact>
               <HomePage />
+            </Route>
+            <Route path="/overview" exact>
+              <OverviewPage />
             </Route>
             <Redirect to="/" />
           </Switch>
@@ -25,6 +32,7 @@ export const Routes = () => {
             <LoginPage />
         </Route>
         <Route path="/register" exact>
+            {registerRedirect && <RegisterRedirect/>}
             <RegisterPage />
         </Route>
         <Redirect to="/login" />

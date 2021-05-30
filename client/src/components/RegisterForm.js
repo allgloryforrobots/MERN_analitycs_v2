@@ -1,12 +1,10 @@
-import React, {useEffect} from "react"
+import React from "react"
 import { Form, Input, Button } from 'antd'
 import { useDispatch } from 'react-redux'
-import { message } from 'antd'
-import { nullErrorMessage } from '../redux/authSlice'
-import { useSelector } from 'react-redux'
 
-import { loginThunk } from '../redux/authSlice'
-import styles from '../styles/LoginForm.module.scss'
+
+import { registerThunk } from '../redux/registerSlice'
+import styles from '../styles/RegisterForm.module.scss'
 
 const layout = {
     labelCol: {
@@ -25,24 +23,16 @@ const layout = {
 
 
 
-const LoginForm = () => {
+const RegisterForm = () => {
   const dispatch = useDispatch()
-  let errMessage = useSelector((state) => state.auth.errMessage)
 
   const onFinish = (values) => {
-    dispatch(loginThunk(values))
+    dispatch(registerThunk(values))
   }
 
   const onFinishFailed = (errorInfo) => {}
   
-  useEffect(() => {
-    errMessage && message.error(errMessage, () => dispatch(nullErrorMessage()), [errMessage] )
-  })
-  
-
     return (
-      <>
-
       <Form
         {...layout}
         name="basic"
@@ -52,9 +42,6 @@ const LoginForm = () => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
-
-        
-
         <Form.Item
           label="Email"
           name="email"
@@ -66,7 +53,7 @@ const LoginForm = () => {
             },
           ]}
         >
-          <Input className={styles.LoginForm__input}/>
+          <Input className={styles.RegisterForm__input}/>
         </Form.Item>
   
         <Form.Item
@@ -80,7 +67,7 @@ const LoginForm = () => {
             },
           ]}
         >
-          <Input.Password className={styles.LoginForm__input}/>
+          <Input.Password className={styles.RegisterForm__input}/>
         </Form.Item>
   
         <Form.Item {...tailLayout}>
@@ -90,8 +77,7 @@ const LoginForm = () => {
         </Form.Item>
 
       </Form>
-      </>
     )
   } 
 
-  export default LoginForm
+  export default RegisterForm

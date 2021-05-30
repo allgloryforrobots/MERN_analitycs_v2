@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom'
 import store from './redux/store'
 import { Provider } from 'react-redux'
 
-import './styles/index.module.scss'
-import 'antd/dist/antd.css'
+import './styles/index.scss'
+
 
 import App from './App'
 

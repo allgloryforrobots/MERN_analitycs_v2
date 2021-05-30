@@ -1,0 +1,10 @@
+// @import 'reset.module.scss';
+@import '~antd/dist/antd.css';
+
+.toCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
