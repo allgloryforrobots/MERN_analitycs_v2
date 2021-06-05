@@ -8,10 +8,10 @@ export const loginThunk = createAsyncThunk(
     'auth/loginThunk',      
     async (payload, thunkAPI) => {
       const response = await api.login(payload)
-      console.log('auth/loginThunk, response', response, response.response.data.message)
+      console.log('auth/loginThunk, response', response)
  
       // Handle error from express 
-      if (response.response.data.message) throw new Error(response.response.data.message)
+      if (response?.response?.data?.message) throw new Error(response?.response?.data?.message)
 
       localStorage.setItem('userData', JSON.stringify({
         userId: response.data.userId, token: response.data.token, createTime: response.data.createTime
@@ -19,7 +19,7 @@ export const loginThunk = createAsyncThunk(
 
       return response.data 
     }
-  )
+  ) 
 
 
 export const authSlice = createSlice({
@@ -70,7 +70,7 @@ export const authSlice = createSlice({
         },
       }
   })
-  
+   
 
   export const { login, logout, nullErrorMessage } = authSlice.actions
   

@@ -28,10 +28,10 @@ module.exports.login = async function (req, res) {
       const createTime = Date.now()
       res.status(200).json({token: `Bearer ${token}`, userId: candidate._id, createTime})
     } else {
-      res.status(401).json({message: 'Пароль неверный'})
+      res.status(401).json({message: 'Wrong password'})
     }
   } else {
-    res.status(404).json({message: 'Пользователь не найден'})
+    res.status(404).json({message: 'User is not found'})
   }
 
 }
@@ -47,7 +47,7 @@ module.exports.register = async function (req, res) {
   const candidate = await User.findOne({email: req.body.email})
 
   if (candidate) {
-    res.status(409).json({message: 'Такой email уже занят'})
+    res.status(409).json({message: 'This email is already taken'})
   } else {
     const salt = bcrypt.genSaltSync(10)
     const user = new User({

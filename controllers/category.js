@@ -39,7 +39,7 @@ module.exports.delete = async function(req, res) {
   try {
     await Category.remove({_id: req.params.id})
     await Position.find({category: req.params.id})
-    res.status(200).json({message: 'Удалено'})
+    res.status(200).json({message: 'Deleted'})
   } catch (e) {
     errorHandler(res, e)
   }

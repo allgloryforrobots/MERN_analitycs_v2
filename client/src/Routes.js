@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import OverviewPage from './pages/OverviewPage'
+import AssortmentPage from './pages/AssortmentPage'
 import RegisterRedirect from './components/RegisterRedirect'
 
 export const Routes = () => {
@@ -20,6 +21,9 @@ export const Routes = () => {
             </Route>
             <Route path="/overview" exact>
               <OverviewPage />
+            </Route>
+            <Route path="/assortment" exact>
+              <AssortmentPage />
             </Route>
             <Redirect to="/" />
           </Switch>

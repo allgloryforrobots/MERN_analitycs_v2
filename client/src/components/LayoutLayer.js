@@ -34,7 +34,7 @@ function LayoutLayer (props) {
 
     return (
       <Layout 
-        style={{height: '100vh'}}
+        style={{minHeight: '100vh'}}
       >
 
 

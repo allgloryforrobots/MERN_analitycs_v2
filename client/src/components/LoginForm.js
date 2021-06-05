@@ -62,7 +62,7 @@ const LoginForm = () => {
             {
               required: true,
               type: 'email',
-              message: 'Введите корректный email',
+              message: 'Please enter a valid email',
             },
           ]}
         >
@@ -76,7 +76,7 @@ const LoginForm = () => {
             {
               required: true,
               pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$/,
-              message: 'Пароль должен содержать цифры, заглавную и строчную буквы, длина 8-15 символов, только латиница',
+              message: 'Password must contain numbers, uppercase and lowercase letters, length 8-15 characters',
             },
           ]}
         >
