@@ -37,12 +37,11 @@ function LayoutLayer (props) {
         style={{minHeight: '100vh'}}
       >
 
-
         {isWide && 
         <Sider 
-        trigger={null} 
-        collapsible 
-        collapsed={collapsed}
+          trigger={null} 
+          collapsible 
+          collapsed={collapsed}
         >
           <div className={styles.logo} />
           <LayoutLayerMenu/>
@@ -50,8 +49,8 @@ function LayoutLayer (props) {
 
         <Layout className={styles.layout}>
           <Header 
-          className={styles.layout__background} 
-          style={{ padding: 0, display: 'flex', justifyContent: 'space-between' }}
+            className={styles.layout__background} 
+            style={{ padding: 0, display: 'flex', justifyContent: 'space-between' }}
           >
             {isWide && 
             React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {

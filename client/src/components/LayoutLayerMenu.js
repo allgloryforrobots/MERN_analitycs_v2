@@ -2,7 +2,7 @@ import React from "react"
 import { useSelector } from 'react-redux'
 import {useLocation} from "react-router-dom"
 import {Link} from "react-router-dom"
-import { Menu } from 'antd';
+import { Menu } from 'antd'
 import {
   HomeOutlined,
   KeyOutlined,
@@ -22,10 +22,11 @@ const LayoutLayerMenu = () => {
 
     if (isAuth) return (
 
-          <Menu theme="dark" 
-          mode={isWide ? "inline" : "horizontal"} 
-          defaultSelectedKeys={["/"]} 
-          selectedKeys={[location.pathname]}
+          <Menu 
+            theme="dark" 
+            mode={isWide ? "inline" : "horizontal"} 
+          // defaultSelectedKeys={["/"]} 
+            selectedKeys={[location.pathname]}
           >
 
             <Menu.Item key="/" icon={<HomeOutlined />}>
@@ -50,10 +51,10 @@ const LayoutLayerMenu = () => {
     )
     return (
         <Menu 
-        theme="dark" 
-        mode={isWide ? "inline" : "horizontal"} 
-        defaultSelectedKeys={["/login"]} 
-        selectedKeys={[location.pathname]}
+          theme="dark" 
+          mode={isWide ? "inline" : "horizontal"} 
+          defaultSelectedKeys={["/login"]} 
+          selectedKeys={[location.pathname]}
         >
 
           <Menu.Item key="/login" icon={<KeyOutlined />}>
