@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { PushpinOutlined } from '@ant-design/icons'
-import {Button, Form, Modal, Input} from 'antd'
+import { Button, Form, Modal, Input } from 'antd'
 
 const layout = {
     labelCol: {
@@ -18,7 +18,7 @@ const layout = {
     },
   }
 
-export default () => {
+export default function AssortmentModal() {
     const [isModalVisible, setIsModalVisible] = useState(false)
 
     const showModal = () => {

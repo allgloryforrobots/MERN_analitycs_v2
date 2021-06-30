@@ -30,6 +30,9 @@ const onFinishFailed = (errorInfo) => {
 export default function AssortmentForm() {
     return (
             <Form
+            initialValues={{
+                category: 'Drinks'
+            }}
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
             >
@@ -55,7 +58,6 @@ export default function AssortmentForm() {
                 >
                     <Input 
                         addonBefore="Name" 
-                        defaultValue="Drinks"
                         className={styles.assortment__input}
                     />
                 </Form.Item>

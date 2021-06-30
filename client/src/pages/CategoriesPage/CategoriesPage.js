@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Divider, Button, Modal, Form, Input, Upload } from 'antd'
 import { PushpinOutlined, UploadOutlined } from '@ant-design/icons'
 
-import CategoriesList from '../components/CategoriesList'
+import CategoriesList from './components/CategoriesList'
 
 const layout = {
   labelCol: {

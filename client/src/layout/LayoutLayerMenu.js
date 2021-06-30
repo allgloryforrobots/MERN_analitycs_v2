@@ -41,11 +41,11 @@ const LayoutLayerMenu = () => {
             <Menu.Item key="/history" icon={<BookOutlined />}>
               <Link to="/history">History</Link>
             </Menu.Item>
-            <Menu.Item key="/order" icon={<PaperClipOutlined />}>
-              <Link to="/order">Add order</Link>
+            <Menu.Item key="/orders" icon={<PaperClipOutlined />}>
+              <Link to="/orders">Add order</Link>
             </Menu.Item>
-            <Menu.Item key="/assortment" icon={<FireOutlined />}>
-              <Link to="/assortment">Assortment</Link>
+            <Menu.Item key="/categories" icon={<FireOutlined />}>
+              <Link to="/categories">Assortment</Link>
             </Menu.Item>
           </Menu>
     )

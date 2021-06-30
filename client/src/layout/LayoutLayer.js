@@ -6,10 +6,11 @@ import {
 } from '@ant-design/icons'
 import { useSelector, useDispatch } from 'react-redux'
 import {useMedia} from 'react-use'
-
 import { logout } from '../redux/authSlice'
+
 import LayoutLayerMenu from './LayoutLayerMenu'
-import styles from '../styles/LayoutLayer.module.scss'
+
+import styles from './styles/LayoutLayer.module.scss'
 
 const { Header, Sider, Content } = Layout
 

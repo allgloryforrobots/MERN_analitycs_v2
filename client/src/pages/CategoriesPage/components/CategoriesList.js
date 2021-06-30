@@ -12,7 +12,7 @@ export default () => (
         size="small"
         bordered
         dataSource={data}
-        renderItem={item => <List.Item> <Link to={`/assortment/${item.id}`} >{item.name}</Link> </List.Item> }
+        renderItem={item => <List.Item> <Link to={`/categories/${item.id}`} >{item.name}</Link> </List.Item> }
     />
 )
 

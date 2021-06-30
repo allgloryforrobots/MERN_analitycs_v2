@@ -6,8 +6,12 @@ import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import OverviewPage from './pages/OverviewPage'
-import AssortmentPage from './pages/AssortmentPage'
-import CategoriesPage from './pages/CategoriesPage'
+import AssortmentPage from './pages/AssortmentPage/AssortmentPage'
+import CategoriesPage from './pages/CategoriesPage/CategoriesPage'
+import OrdersPage from './pages/OrdersPage/OrdersPage'
+import HistoryPage from './pages/HistoryPage'
+import AnalitycsPage from './pages/AnalitycsPage/AnalitycsPage'
+import OrderIdPage from './pages/OrderIdPage'
 import RegisterRedirect from './components/RegisterRedirect'
 
 export const Routes = () => {
@@ -23,11 +27,23 @@ export const Routes = () => {
             <Route path="/overview" exact>
               <OverviewPage />
             </Route>
-            <Route path="/assortment/:id" >
+            <Route path="/categories/:id" >
               <AssortmentPage />
             </Route>
-            <Route path="/assortment" exact>
+            <Route path="/categories" exact>
               <CategoriesPage />
+            </Route>
+            <Route path="/analitycs" exact>
+              <AnalitycsPage />
+            </Route>
+            <Route path="/history" exact>
+              <HistoryPage />
+            </Route>
+            <Route path="/orders" exact>
+              <OrdersPage />
+            </Route>
+            <Route path="/orders/:id">
+              <OrderIdPage />
             </Route>
             <Redirect to="/" />
           </Switch>

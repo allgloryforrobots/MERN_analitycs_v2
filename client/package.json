@@ -13,6 +13,7 @@
     "axios": "^0.21.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+    "framer-motion": "^4.1.13",
     "jsonwebtoken": "^8.5.1",
     "less": "^4.1.1",
     "react": "^17.0.2",
